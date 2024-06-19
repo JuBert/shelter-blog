@@ -4,6 +4,9 @@ dependencies:
   '@astrojs/check':
     specifier: ^0.7.0
     version: 0.7.0(typescript@5.4.5)
+  '@astrojs/ts-plugin':
+    specifier: ^1.8.0
+    version: 1.8.0
   astro:
     specifier: ^4.10.2
     version: 4.10.2(typescript@5.4.5)
@@ -123,6 +126,17 @@ packages:
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@astrojs/ts-plugin@1.8.0:
+    resolution: {integrity: sha512-SXbMemCjA66eHXLon2uDGkLAdbIRS+EzSBKPqBuOcQ4XzU/o+oTTp12cXBIQTOtP/zsnuJPYA6gc36Ylic196g==}
+    dependencies:
+      '@astrojs/compiler': 2.8.0
+      '@jridgewell/sourcemap-codec': 1.4.15
+      '@volar/language-core': 2.2.5
+      '@volar/typescript': 2.2.5
+      semver: 7.6.2
+      vscode-languageserver-textdocument: 1.0.11
     dev: false
 
   /@babel/code-frame@7.24.7:
