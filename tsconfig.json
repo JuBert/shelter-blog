@@ -4,16 +4,28 @@
     "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@styles/*": ["src/styles/*"],
-      "@scripts/*": ["src/scripts/*"],
-      "@pages/*": ["src/pages/*"],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@scripts/*": [
+        "src/scripts/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ]
     },
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
-      },
+      }
     ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   }
 }
