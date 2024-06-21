@@ -9,5 +9,9 @@ export default function CountingComponent() {
 
 	onCleanup(() => clearInterval(interval));
     
-	return <div>Count value is {count()}</div>;
+	return (
+		<div class="w-full p-4 my-2 flex justify-center">
+			<p>Count value is {count()}</p>
+		</div>
+	);
 };
