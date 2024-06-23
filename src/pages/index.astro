@@ -1,9 +1,16 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import HelloWorld from '@components/HelloWorld'
+import HelloWorld from '@components/HelloWorld';
+import { Button } from '@components/util/Button';
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome homepage subtitle</h2>
-  <HelloWorld client:load />
+  <h2 class="py-4">My awesome homepage subtitle</h2>
+  <Button 
+    text='Visit blog'
+    variant='primary'
+    to="/blog"
+    client:visible
+  />
+  <HelloWorld client:visible />
 </BaseLayout>
