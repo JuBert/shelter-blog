@@ -17,7 +17,7 @@ export default function CountingComponent() {
 			<p>Count value is {count()}</p>
 			<Button 
 				text='my nested button'
-				variant='tertiary'
+				variant='secondary'
 				handleClick={handleClick}
 			/>
 		</div>

@@ -2,8 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--primary-100: #D8E7DA;
+	--primary-200: #BFD6C7;
+	--primary-300: #A5C6B6;
+	--primary-400: #8CB5A9;
+	--primary-500: #74A39E;
+	--primary-600: #5B8E92;
+	--primary-700: #437080;
+	--primary-800: #3A5771;
+	--primary-900: #314062;
+	--primary-1000: #050e12;
+  --secondary-100: #D8E7E7;
+	--secondary-200: #BFD2D6;
+	--secondary-300: #A5BAC6;
+	--secondary-400: #8C9FB5;
+	--secondary-500: #7481A3;
+	--secondary-600: #5B6092;
+	--secondary-700: #494380;
+	--secondary-800: #4B3A71;
+	--secondary-900: #4A3162;
+	--secondary-1000: #0e0c1f;
+}
+
 html {
-    background-color: #f1f5f9;
+    background-color: var(--secondary-100);;
     font-family: sans-serif;
   }
   
@@ -36,14 +59,14 @@ html {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #ff9776;
+  background-color: var(--secondary-700);
  }
 
 .nav-links {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #ff9776;
+  background-color: var(--secondary-700);
   display: none;
   margin: 0;
 }
@@ -60,7 +83,7 @@ html {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: var(--primary-500);
 }
 
 .expanded {
@@ -88,7 +111,7 @@ html {
 
 /* dark mode */
 html.dark {
-  background-color: #0d0950;
+  background-color: var(--primary-1000);
   color: #fff;
 }
 
