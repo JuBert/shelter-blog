@@ -2,7 +2,7 @@ import type { Component } from 'solid-js';
 import { Dynamic } from "solid-js/web"
 
 type ButtonProps = {
-  variant: string;
+  variant: 'primary' | 'secondary';
   text: string;
   isUppercase?: boolean;
   to?: string;
@@ -11,9 +11,8 @@ type ButtonProps = {
 
 export const Button: Component<ButtonProps> = (props) => {
   const variants = {
-    primary: 'bg-blue-600 hover:bg-blue-500 text-white',
-    secondary: 'bg-red-500 hover:bg-red-400 text-white',
-    tertiary: 'bg-yellow-300 hover:bg-yellow-400 text-black',
+    primary: 'bg-primary-standard hover:bg-primary-prominent text-white',
+    secondary: 'bg-secondary-standard hover:bg-secondary-prominent text-white',
   }
 
   const ButtonElement = () => (
@@ -28,6 +27,7 @@ export const Button: Component<ButtonProps> = (props) => {
         {props.text}
     </button>
   )
+
   const AnchorElement = () => (
     <a 
       href={props.to} 
@@ -42,9 +42,6 @@ export const Button: Component<ButtonProps> = (props) => {
   )
   const componentOptions = props.to ? AnchorElement : ButtonElement
 
-
-  return (
-    <Dynamic component={componentOptions} />
-  )
+  return <Dynamic component={componentOptions} />
 };
 

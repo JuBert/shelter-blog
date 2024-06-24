@@ -1,7 +1,9 @@
 ---
+import { Button } from '@components/util/Button';
+
 const { platform, username } = Astro.props;
 ---
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<Button text={platform} variant='secondary' to={`https://www.${platform}.com/${username}`} />
 
 <style>
     a {
